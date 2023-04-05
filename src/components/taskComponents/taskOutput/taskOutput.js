@@ -6,7 +6,7 @@ function TaskOutput({ tasks, id }) {
         <div className="tasks_form">
             {
                 tasks.map(task => (
-                    <Task task={task} />
+                    task.listId === id ? <Task task={task} /> : ''
                 ))
             }
         </div>

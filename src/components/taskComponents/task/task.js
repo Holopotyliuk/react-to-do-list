@@ -8,7 +8,7 @@ function Task({ task }) {
         <div className="task">
             <p>{task.taskid}</p>
             <h3>{task.title}</h3>
-            <input type="checkbox" checked={task.done}></input>
+            <input type="checkbox" checked={task.done} onChange={()=>{}}></input>
             <h3>{date}</h3>
         </div>
     )
