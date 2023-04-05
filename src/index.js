@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+const inc = (init = 0) => () => ++init;
+const getId = inc()
+let lists = [
+  {
+    listId: getId(),
+    title: 'First list'
+  },
+  {
+    listId: getId(),
+    title: 'Second list'
+  }];
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    fdh
-  </React.StrictMode>
+  <App />
 );
 
-reportWebVitals();
