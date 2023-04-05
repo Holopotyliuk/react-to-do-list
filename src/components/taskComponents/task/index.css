@@ -1,0 +1,23 @@
+.task {
+    display: flex;
+    justify-content: center;
+    margin: 20px 50px;
+    background-color: rgb(162, 191, 221);
+    border-radius: 1em;
+    box-shadow: 8px 4px 8px 0px rgba(34, 60, 80, 0.5);
+    font-size: 20px;
+}
+
+p {
+    margin-top: 26px;
+    padding: 0px;
+    font-size: 20px;
+}
+
+h3 {
+    margin-left: 10px;
+}
+
+input {
+    margin: 0px 0px 0px 20px;
+}

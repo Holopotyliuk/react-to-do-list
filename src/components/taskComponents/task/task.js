@@ -7,9 +7,9 @@ function Task({ task }) {
     return (
         <div className="task">
             <p>{task.taskid}</p>
-            <h2>{task.title}</h2>
+            <h3>{task.title}</h3>
             <input type="checkbox" checked={task.done}></input>
-            <h2>{date}</h2>
+            <h3>{date}</h3>
         </div>
     )
 }

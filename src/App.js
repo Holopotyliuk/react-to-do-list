@@ -29,7 +29,7 @@ let tasks = [
   {
     taskid: getId(),
     title: 'Second task',
-    done: false,
+    done: true,
     due_date: new Date(),
     listId: 1
   },
