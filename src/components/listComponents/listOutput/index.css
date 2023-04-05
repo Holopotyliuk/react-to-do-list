@@ -1,0 +1,6 @@
+.list_form{
+    background-color:beige;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
