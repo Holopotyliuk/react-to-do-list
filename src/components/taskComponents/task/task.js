@@ -1,5 +1,7 @@
 import React from "react";
 import './index.css'
+//const controller = require('../../../controllers/taskController/taskController')
+//const controllers = require('../../../controllers/taskController/taskController.js')
 function Task({ task }) {
     let due_date = new Date(task.due_date);
     let optionsTaskDate = { year: 'numeric', month: 'long', day: '2-digit' };
@@ -8,9 +10,9 @@ function Task({ task }) {
         <div className="task">
             <p>{task.taskid}</p>
             <h3>{task.title}</h3>
-            <input type="checkbox" checked={task.done} onChange={()=>{}}></input>
+            <input type="checkbox" checked={task.done} onChange={() => { }}></input>
             <h3>{date}</h3>
-            <button className="delete">DELETE</button>
+            <button className="delete" onClick={() => (console.log('l'))}>DELETE</button>
         </div>
     )
 }
