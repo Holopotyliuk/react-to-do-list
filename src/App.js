@@ -1,6 +1,7 @@
 import React from 'react';
 import ListOutput from './components/listComponents/listOutput/listOutput';
-
+import Task from './components/taskComponents/task/task';
+import './index.css'
 const inc = (init = 0) => () => ++init;
 const getId = inc()
 let lists = [
@@ -19,35 +20,35 @@ let lists = [
 
 let tasks = [
   {
-    tasksid: getId(),
+    taskid: getId(),
     title: 'first task',
     done: false,
     due_date: new Date(),
     listId: 1
   },
   {
-    tasksid: getId(),
+    taskid: getId(),
     title: 'Second task',
     done: false,
     due_date: new Date(),
     listId: 1
   },
   {
-    tasksid: getId(),
+    taskid: getId(),
     title: 'first task from list two',
     done: false,
     due_date: new Date(),
     listId: 2
   },
   {
-    tasksid: getId(),
+    taskid: getId(),
     title: 'second task from list two',
     done: false,
     due_date: new Date(),
     listId: 2
   },
   {
-    tasksid: getId(),
+    taskid: getId(),
     title: 'first task from list three',
     done: false,
     due_date: new Date(),
@@ -60,6 +61,7 @@ function App() {
   return (
     < div className="App" >
       <ListOutput lists={lists} />
+      <Task task={tasks[0]}/>
     </div >
   );
 }
