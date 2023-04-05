@@ -10,6 +10,7 @@ function Task({ task }) {
             <h3>{task.title}</h3>
             <input type="checkbox" checked={task.done} onChange={()=>{}}></input>
             <h3>{date}</h3>
+            <button className="delete">DELETE</button>
         </div>
     )
 }

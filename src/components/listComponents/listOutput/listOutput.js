@@ -7,7 +7,6 @@ function ListOutput({ lists, setListId }) {
             {
                 lists.map(list => (
                     <List list={list} setListId={setListId} />
-
                 ))
             }
         </div>
