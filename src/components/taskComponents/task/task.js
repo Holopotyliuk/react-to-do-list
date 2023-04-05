@@ -1,8 +1,7 @@
 import React from "react";
 import './index.css'
-//const controller = require('../../../controllers/taskController/taskController')
-//const controllers = require('../../../controllers/taskController/taskController.js')
-function Task({ task }) {
+import controller from "../../../controllers/taskController/taskController"
+function Task({ task, setUpdate }) {
     let due_date = new Date(task.due_date);
     let optionsTaskDate = { year: 'numeric', month: 'long', day: '2-digit' };
     let date = Intl.DateTimeFormat('en-US', optionsTaskDate).format(due_date)
@@ -12,7 +11,7 @@ function Task({ task }) {
             <h3>{task.title}</h3>
             <input type="checkbox" checked={task.done} onChange={() => { }}></input>
             <h3>{date}</h3>
-            <button className="delete" onClick={() => (console.log('l'))}>DELETE</button>
+            <button className="delete" onClick={() => (controller.remove(task.taskid, setUpdate))}>DELETE</button>
         </div>
     )
 }
