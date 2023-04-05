@@ -1,6 +1,6 @@
 import React from 'react';
 import ListOutput from './components/listComponents/listOutput/listOutput';
-import Task from './components/taskComponents/task/task';
+import TaskOutput from './components/taskComponents/taskOutput/taskOutput';
 import './index.css'
 const inc = (init = 0) => () => ++init;
 const getId = inc()
@@ -61,7 +61,7 @@ function App() {
   return (
     < div className="App" >
       <ListOutput lists={lists} />
-      <Task task={tasks[0]}/>
+      <TaskOutput tasks={tasks} />
     </div >
   );
 }
