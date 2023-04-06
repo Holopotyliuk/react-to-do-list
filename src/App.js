@@ -7,11 +7,10 @@ import tasks from './data/tasks'
 
 function App() {
   const [listId, setListId] = useState(lists[0].listId)
-  const [update, setUpdate] = useState(0);
   return (
     < div className="App" >
       <ListOutput lists={lists} tasks={tasks} setListId={setListId} />
-      <TaskOutput tasks={tasks} id={listId} setUpdate={setUpdate} />
+      <TaskOutput tasks={tasks} id={listId} />
     </div >
   );
 }
