@@ -5,6 +5,11 @@ class Task {
         tasks.splice(indexTask, 1)
         setUpdate(!update)
     }
+    updateCheck(id, checked, setCkecked) {
+        const indexTask = tasks.findIndex(task => task.taskid === id);
+        tasks[indexTask].done = !checked;
+        setCkecked(!checked);
+    }
 }
 
 export default new Task();
