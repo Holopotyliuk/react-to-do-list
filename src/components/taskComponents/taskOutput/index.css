@@ -1,7 +1,15 @@
-.tasks_form{
-    background-color:beige;
+.tasks_form {
+    background-color: beige;
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 100%;
+    flex-wrap: wrap-reverse;
+}
+
+.buttonCreate {
+    margin-top: 20px;
+    width: 100px;
+    border-radius: 1em;
+    margin-right: 50px;
 }
