@@ -11,15 +11,8 @@ class Task {
         setChecked(!checked)
 
     }
-    create(values, listId, setUpdate, update) {
-        let obj = {
-            taskid: 100,
-            title: values.input1,
-            done: false,
-            due_date: new Date(values.input2),
-            listId: listId
-        }
-        tasks.push(obj)
+    create(task, setUpdate, update) {
+        tasks.push(task)
         setUpdate(!update)
     }
 }

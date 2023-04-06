@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Task from "../task/task";
-import CreateTask from "../createTask/createtask";
+import CreateTask from "../createTask/createTask";
 import './index.css'
 function TaskOutput({ tasks, id }) {
     const [update, setUpdate] = useState(true);
