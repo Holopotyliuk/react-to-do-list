@@ -8,7 +8,7 @@ function TaskOutput({ tasks, id }) {
     return (
         <div className="tasks_form">
             <button className="buttonCreate" onClick={() => { setShowForm(!showform) }}>CREATE TASK</button>
-            {showform ? <CreateTask /> : ''}
+            {showform ? <CreateTask id={id} setUpdate={setUpdate} update={update} /> : ''}
             {
                 tasks.map(task => (
                     task.listId === id ? <Task task={task} setUpdate={setUpdate} update={update} /> : ''

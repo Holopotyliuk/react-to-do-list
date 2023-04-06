@@ -12,3 +12,12 @@
 input {
     margin: 10px 5px;
 }
+
+.createButton {
+    margin-top: 8px;
+    height: 25px;
+    position: absolute;
+    right: 45px;
+    border-radius: 1em;
+    background-color: chartreuse;
+}
