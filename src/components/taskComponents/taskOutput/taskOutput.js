@@ -11,7 +11,7 @@ function TaskOutput({ tasks, id }) {
             {showform ? <CreateTask id={id} setUpdate={setUpdate} update={update} /> : ''}
             {
                 tasks.map(task => (
-                    task.listId === id ? <Task task={task} setUpdate={setUpdate} update={update} /> : ''
+                    task.listid === id ? <Task task={task} setUpdate={setUpdate} update={update} /> : ''
                 ))
             }
         </div>
