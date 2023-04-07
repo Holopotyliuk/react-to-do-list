@@ -4,35 +4,35 @@ const getId = inc()
 
 let tasks = [
     {
-        taskid: getId(),
+        id: getId(),
         title: 'first task',
         done: false,
         due_date: new Date(),
         listId: 1
     },
     {
-        taskid: getId(),
+        id: getId(),
         title: 'Second task',
         done: true,
         due_date: new Date(),
         listId: 1
     },
     {
-        taskid: getId(),
+        id: getId(),
         title: 'first task from list two',
         done: false,
         due_date: new Date(),
         listId: 2
     },
     {
-        taskid: getId(),
+        id: getId(),
         title: 'second task from list two',
         done: false,
         due_date: new Date(),
         listId: 2
     },
     {
-        taskid: getId(),
+        id: getId(),
         title: 'first task from list three',
         done: false,
         due_date: new Date(),

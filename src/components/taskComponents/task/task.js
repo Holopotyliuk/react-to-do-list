@@ -8,11 +8,11 @@ function Task({ task, setUpdate, update }) {
     const [checked, setChecked] = useState(task.done)
     return (
         <div className="task">
-            <p>{task.taskid}</p>
+            <p>{task.id}</p>
             <h3>{task.title}</h3>
-            <input type="checkbox" checked={checked} onChange={() => { controller.updateCheck(task.taskid, checked, setChecked) }}></input>
+            <input type="checkbox" checked={checked} onChange={() => { controller.updateCheck(task.id, checked, setChecked) }}></input>
             <h3>{date}</h3>
-            <button className="delete" onClick={() => (controller.remove(task.taskid, setUpdate, update))}>DELETE</button>
+            <button className="delete" onClick={() => (controller.remove(task.id, setUpdate, update))}>DELETE</button>
         </div>
     )
 }

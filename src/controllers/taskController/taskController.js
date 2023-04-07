@@ -1,12 +1,12 @@
 import tasks from '../../data/tasks.js'
 class Task {
     remove(id, setUpdate, update) {
-        const indexTask = tasks.findIndex(task => task.taskid === id);
+        const indexTask = tasks.findIndex(task => task.id === id);
         tasks.splice(indexTask, 1)
         setUpdate(!update)
     }
     updateCheck(id, checked, setChecked) {
-        const indexTask = tasks.findIndex(task => task.taskid === id);
+        const indexTask = tasks.findIndex(task => task.id === id);
         tasks[indexTask].done = !checked;
         setChecked(!checked)
 
