@@ -1,20 +1,26 @@
-import tasks from '../../data/tasks.js'
+import { dataTasks } from '../../App'
+import { update } from '../../models/taskModels.js'
 class Task {
     remove(id, setUpdate, update) {
-        const indexTask = tasks.findIndex(task => task.id === id);
-        tasks.splice(indexTask, 1)
+        const indexTask = dataTasks.findIndex(task => task.id === id);
+        dataTasks.splice(indexTask, 1)
         setUpdate(!update)
     }
     updateCheck(id, checked, setChecked) {
-        const indexTask = tasks.findIndex(task => task.id === id);
-        tasks[indexTask].done = !checked;
-        setChecked(!checked)
+        update(id, !checked)
+            .then(() => {
+                setChecked(!checked)
+                const indexTask = dataTasks.findIndex(task => task.id === id);
+                dataTasks[indexTask].done = !checked;
+            })
 
     }
     create(task, setUpdate, update) {
-        tasks.push(task)
+        dataTasks.push(task)
         setUpdate(!update)
     }
 }
 
-export default new Task();
+const taskInstance = new Task();
+
+export default taskInstance;
