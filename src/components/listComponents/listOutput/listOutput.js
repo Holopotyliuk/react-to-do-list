@@ -8,7 +8,7 @@ function ListOutput({ lists, setListId }) {
     return (
         <div className="list_form">
             <button className="buttonCreatelist" onClick={() => { setShowForm(!showform) }}>CREATE LIST</button>
-            {showform ? <CreateList setUpdate={setUpdate} update={update} /> : ''}
+            {showform ? <CreateList setUpdate={setUpdate} update={update} setShowForm={setShowForm} showform={setShowForm} /> : ''}
             {
                 lists.map(list => (
                     <List list={list} setListId={setListId}/>
