@@ -11,7 +11,7 @@ function ListOutput({ lists, setListId }) {
             {showform ? <CreateList setUpdate={setUpdate} update={update} /> : ''}
             {
                 lists.map(list => (
-                    <List list={list} setListId={setListId} />
+                    <List list={list} setListId={setListId}/>
                 ))
             }
         </div>
