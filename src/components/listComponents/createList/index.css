@@ -1,0 +1,11 @@
+.formCreateList {
+    text-align: center;
+}
+
+.okListButton {
+    margin-top: 8px;
+    height: 25px;
+    right: 45px;
+    border-radius: 1em;
+    background-color: chartreuse;
+}
