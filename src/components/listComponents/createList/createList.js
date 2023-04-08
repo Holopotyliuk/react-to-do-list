@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-//import controller from '../../../controllers/taskController/taskController'
+import controller from '../../../controllers/listController/listController'
 import './index.css'
-function CreateList({ id, setUpdate, update }) {
+function CreateList({ setUpdate, update }) {
     const [values, setValue] = useState('title')
     return (
         <form className="formCreateList">
-            <input type="text" value={values} onChange={event => { setValue(event) }} />
-            <button type="button" className="okListButton" onClick={() => {console.log('create list')}}>OK</button>
+            <input type="text" value={values} onChange={event => { setValue(event.target.value) }} />
+            <button type="button" className="okListButton" onClick={() => { controller.create(values, setUpdate, update) }}>OK</button>
         </form>
     )
 }
