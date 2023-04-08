@@ -20,11 +20,10 @@ function CreateTask({ id, setUpdate, update }) {
 }
 function createObject(values, listId) {
     let task = {
-        id: 100,
         title: values.input1,
         done: false,
         due_date: new Date(values.input2),
-        listId: listId
+        listid: listId
     }
     return task
 }

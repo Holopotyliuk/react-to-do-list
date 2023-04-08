@@ -1,5 +1,5 @@
 import { dataTasks } from '../../App'
-import { update } from '../../models/taskModels.js'
+import { update, create } from '../../models/taskModels.js'
 class Task {
     remove(id, setUpdate, update) {
         const indexTask = dataTasks.findIndex(task => task.id === id);
@@ -16,8 +16,11 @@ class Task {
 
     }
     create(task, setUpdate, update) {
-        dataTasks.push(task)
-        setUpdate(!update)
+        create(task)
+            .then((task) => {
+                dataTasks.push(task[0])
+                setUpdate(!update)
+            })
     }
 }
 
