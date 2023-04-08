@@ -12,5 +12,13 @@ async function create(task) {
     const tasks = await axios.post(`http://localhost:8000/tasks`, { title: title, done: done, due_date: due_date, listId: listid })
     return tasks.data
 }
+async function remove(id) {
+    const tasks = await axios.delete(`http://localhost:8000/tasks/${id}`, {
+        params: {
+            id: id
+        }
+    });
+    return tasks.data
+}
 
-export { getTask, update, create } 
+export { getTask, update, create, remove } 

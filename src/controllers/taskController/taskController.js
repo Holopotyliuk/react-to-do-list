@@ -1,10 +1,13 @@
 import { dataTasks } from '../../App'
-import { update, create } from '../../models/taskModels.js'
+import { update, create, remove } from '../../models/taskModels.js'
 class Task {
     remove(id, setUpdate, update) {
-        const indexTask = dataTasks.findIndex(task => task.id === id);
-        dataTasks.splice(indexTask, 1)
-        setUpdate(!update)
+        remove(id)
+            .then(() => {
+                const indexTask = dataTasks.findIndex(task => task.id === id);
+                dataTasks.splice(indexTask, 1)
+                setUpdate(!update)
+            })
     }
     updateCheck(id, checked, setChecked) {
         update(id, !checked)
